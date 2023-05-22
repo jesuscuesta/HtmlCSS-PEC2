@@ -1,6 +1,10 @@
 $font-secondary: #fff;
 $background-color: #333;
 
+body {
+  margin: 0;
+}
+
 h1 {
   color: cadetblue;
   font-family: cursive;
@@ -23,6 +27,20 @@ footer {
   color: $font-secondary;
   text-align: center;
   padding: 20px;
+}
+
+.header {
+  display: flex;
+}
+
+.header-logo {
+  width: 35px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.header-title {
+  padding-top: 7px;
 }
 
 nav ul {
@@ -85,4 +103,98 @@ section p {
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer .header-logo {
+  margin-top: 15px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* Animación de zoom para imágenes de la galería */
+.gallery {
+  overflow: hidden;
+}
+
+.gallery img {
+  transition: all 0.3s ease-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 9;
+}
+
+.portada {
+  width: 100%;
+  text-align: center;
+}
+/* Efecto Clip-path en portada 
+  Añadido extra moviemiento al poner el ratón encima, y que se ponga de color gris
+*/
+.portada-torre {
+  clip-path: circle(100%);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.portada-torre:hover {
+  clip-path: circle(40%);
+  filter: grayscale(1);
+}
+
+.historia-content {
+  display: flex;
+}
+
+.historia-img {
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 10px;
+}
+
+.detalle__content {
+  width: 100%;
+  text-align: center;
+}
+
+.detalle-img {
+  width: 400px;
+  clip-path: circle(50%);
+}
+
+.detalle-img:hover {
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px #ec731e;
+  transform: rotate(360deg);
+}
+
+.presentation__img {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.presentation-svg {
+  height: 150px;
+}
+
+/* Animacion SVG */
+@keyframes scaleOpacity {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.presentation-svg {
+  animation: scaleOpacity 10s ease infinite;
 }

@@ -2,13 +2,17 @@
   <h1>Presentación</h1>
 </header>
 
-<section>
+<section class="presentation">
   <p>
     Bienvenidos a nuestro sitio web dedicado a la Torre Eiffel, uno de los
     monumentos más icónicos de París y de todo el mundo. En esta página, te
     ofrecemos una explicación detallada sobre lo que encontrarás en nuestro
     sitio web.
   </p>
+  <div class="presentation__img">
+    <img class="presentation-svg" src="./assets/imgs/torresvg.svg" alt="Torre Eiffel SVG"/>
+  </div>
+  
   <h2>Contenido del sitio web</h2>
   <p>
     En nuestro sitio web, encontrarás información relacionada con la Torre
@@ -46,12 +50,14 @@
         alt="Vista panorámica dela Torre Eiffel"
       />
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Tour_Eiffel_top.jpg"
-        alt="De noche"
-      />
-      <img
-        src="https://www.toureiffel.paris/sites/default/files/styles/narrow_x1_850/public/2023-03/avant_apres_corpstexte_4.jpg?itok=2yxox9QL"
+        src="./assets/imgs/tiempo.jpg"
+        srcset="./assets/imgs/tiempo-small.jpg 2x"
         alt="Antiguo y nuevo"
       />
+      <picture>
+        <source media="(min-width: 800px)" srcset="./assets/imgs/Tour_Eiffel_top-medio.jpg">
+        <source media="(min-width: 450px)" srcset="./assets/imgs/Tour_Eiffel_top-small.jpg">
+        <img src="./assets/imgs/Tour_Eiffel_top-grande.jpg" alt="torre eiffel">
+      </picture>
     </div>
   </section>
