@@ -96,6 +96,7 @@ section p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
+  overflow: hidden;
 }
 
 .gallery img {
@@ -103,6 +104,13 @@ section p {
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* Animación de zoom para imágenes de la galería */
+  transition: all 0.3s ease-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 9;
 }
 
 .footer .header-logo {
@@ -111,19 +119,8 @@ section p {
   border-radius: 10px;
 }
 
-/* Animación de zoom para imágenes de la galería */
-.gallery {
-  overflow: hidden;
-}
 
-.gallery img {
-  transition: all 0.3s ease-out;
-}
 
-.gallery img:hover {
-  transform: scale(1.5, 1.5);
-  z-index: 9;
-}
 
 .portada {
   width: 100%;
@@ -175,10 +172,6 @@ section p {
   margin-bottom: 30px;
 }
 
-.presentation-svg {
-  height: 150px;
-}
-
 /* Animacion SVG */
 @keyframes scaleOpacity {
   0% {
@@ -196,5 +189,6 @@ section p {
 }
 
 .presentation-svg {
+  height: 150px;
   animation: scaleOpacity 10s ease infinite;
 }
